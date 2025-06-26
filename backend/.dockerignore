@@ -1,4 +1,6 @@
-node_modules
 .git
 .gitignore
+node_modules
 README.md
+docker-compose.yml
+.env

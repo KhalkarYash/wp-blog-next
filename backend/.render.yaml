@@ -1,16 +1,16 @@
 services:
   - type: web
-    name: blog-wp
+    name: wp-blog-backend
     env: docker
-    branch: main
     plan: free
     repo: https://github.com/KhalkarYash/wp-blog-next
+    branch: main
     envVars:
       - key: WORDPRESS_DB_HOST
+        sync: false
+      - key: WORDPRESS_DB_NAME
         sync: false
       - key: WORDPRESS_DB_USER
         sync: false
       - key: WORDPRESS_DB_PASSWORD
-        sync: false
-      - key: WORDPRESS_DB_NAME
         sync: false
