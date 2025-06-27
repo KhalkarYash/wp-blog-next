@@ -15,8 +15,17 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Yash Khalkar | Blog",
-  description: "Welcome to my personal blog where I share insights on development, design, and personal growth.",
-  keywords: ["Yash Khalkar", "Blog", "Web Development", "JavaScript", "Next.js", "GraphQL", "Life"],
+  description:
+    "Welcome to my personal blog where I share insights on development, design, and personal growth.",
+  keywords: [
+    "Yash Khalkar",
+    "Blog",
+    "Web Development",
+    "JavaScript",
+    "Next.js",
+    "GraphQL",
+    "Life",
+  ],
   authors: [{ name: "Yash Khalkar", url: "https://yashkhalkar.vercel.app" }],
   creator: "Yash Khalkar",
   openGraph: {
@@ -57,6 +66,13 @@ export default function RootLayout({
       >
         <NavbarDemo />
         {children}
+        {process.env.NODE_ENV === "production" && (
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1925889092848768"
+            crossorigin="anonymous"
+          ></script>
+        )}
       </body>
     </html>
   );
