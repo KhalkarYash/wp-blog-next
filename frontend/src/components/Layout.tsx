@@ -12,7 +12,6 @@ import {
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
-import { SearchIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 export function NavbarDemo() {
@@ -33,13 +32,6 @@ export function NavbarDemo() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <button
-              onClick={() => router.push("/search")}
-              className="p-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded"
-              aria-label="Search"
-            >
-              <SearchIcon className="h-5 w-5" />
-            </button>
             <NavbarButton
               variant="secondary"
               onClick={() => window.location.href = "https://yashkhalkar.vercel.app/#contact"}
