@@ -12,7 +12,6 @@ import {
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 
 export function NavbarDemo() {
   const navItems = [
@@ -23,7 +22,6 @@ export function NavbarDemo() {
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const router = useRouter();
 
   return (
     <div className="relative w-full">

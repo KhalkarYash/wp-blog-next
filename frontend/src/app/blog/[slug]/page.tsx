@@ -6,9 +6,9 @@ import { Metadata } from "next";
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const slug = params.slug;
+  const { slug } = await params;
   const { data } = await client.query({
     query: GET_POST_BY_SLUG,
     variables: { slug },
@@ -27,11 +27,12 @@ export async function generateMetadata({
 export default async function BlogPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
+  const { slug } = await params;
   const { data } = await client.query({
     query: GET_POST_BY_SLUG,
-    variables: { slug: params.slug },
+    variables: { slug },
   });
 
   const post = data?.post;

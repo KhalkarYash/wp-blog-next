@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { NavbarDemo } from "@/components/Layout";
+import { NavbarDemo } from "../components/Layout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -70,7 +70,7 @@ export default function RootLayout({
           <script
             async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1925889092848768"
-            crossorigin="anonymous"
+            crossOrigin="anonymous"
           ></script>
         )}
       </body>
